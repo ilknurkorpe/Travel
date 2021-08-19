@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="gezi.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>Gezmeyi Sever misin?</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+
+</head>
+
+
+ <body>
+    <form id="form1" runat="server">
+
+        <div class="page-wrap">
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="Yorumbul.aspx"><span class="icon fa-file-text-o"></span></a></li>
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<section id="main">
+
+					<!-- Banner -->
+						<section id="banner">
+							<div class="inner">
+								<h1>Gezmeyi Sever Misin?</h1>
+								<ul class="actions">
+									<p>Yapılan Yorumları Görmek İçin Bu Butona Tıklayabilirsin.😊</p>
+									<li><a href="Yorumbul.aspx" class="button alt scrolly big">Yorum Bul</a></li>
+								</ul>
+							</div>
+						</section>
+
+					<!-- Gallery -->
+						<section id="galleries">
+
+							<!-- Photo Galleries -->
+								<div class="gallery">
+									<header class="special">
+									</header>
+									<div class="content">
+										<div class="media">
+											<a href="images/thumbs/16.jpeg"><img src="images/thumbs/16.jpeg" alt="" " /></a>
+										</div>
+										<div class="media">
+											<a href="images/thumbs/14.jpeg"><img src="images/thumbs/14.jpeg" alt="" " /></a>
+										</div>
+										<div class="media">
+											<a href="images/thumbs/18.jpeg"><img src="images/thumbs/18.jpeg" alt="" " /></a>
+										</div>
+										<div class="media">
+											<a href="images/thumbs/19.jpeg"><img src="images/thumbs/19.jpeg" alt="" " /></a>
+										</div>
+										
+									</div>
+								</div>
+						</section>
+
+					<!-- Contact -->
+						<section id="contact">
+							<!-- Social -->
+								<div class="social column">
+									<h3>Hakkımda</h3>
+									<p>Merhaba, ben İlknur Körpe.</p>
+									<p>Bu siteyi sizin tatilleriniz esnasında ya da günlük yaşantınızda gezdiğiniz yerler hakkında yorum 
+										yapabilmeniz ve aynı zamanda herhangibir yer hakkında yapılan yorumları görebilmeniz için tasarladım. Hepinize iyi tatiller dilerim.😊 </p>
+									<h3>Beni Takip Edebilirsin</h3>
+									<ul class="icons">
+										<li><a href="https://www.instagram.com/ilknur_krpe/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									</ul>
+								</div>
+
+								<div class="column">
+									<h3>BURADAN YORUM YAPABİLİRSİN</h3>
+									<form action="#" method="post">
+										<div class="field half first">
+											<label for="name">Adınız</label>
+											<asp:TextBox ID="TextBox1" runat="server" PlaceHolder="Adınız"></asp:TextBox>
+										</div>
+										<div class="field half">
+											<label for="surname">Soyadınız</label>
+											<asp:TextBox ID="TextBox2" runat="server" PlaceHolder="Soyadınız"></asp:TextBox>
+										</div>
+										<div class="field half first">
+											<label for="place">Şehir</label>
+											<asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+                                                <asp:ListItem>Adana</asp:ListItem>
+                                                <asp:ListItem>Afyon</asp:ListItem>
+                                                <asp:ListItem>Ağrı</asp:ListItem>
+												<asp:ListItem>Ankara</asp:ListItem>
+												<asp:ListItem>Antalya</asp:ListItem>
+												<asp:ListItem>Aydın</asp:ListItem>
+												<asp:ListItem>Bolu</asp:ListItem>
+												<asp:ListItem>Bursa</asp:ListItem>
+												<asp:ListItem>Çanakkale</asp:ListItem>
+												<asp:ListItem>Denizli</asp:ListItem>
+												<asp:ListItem>Diyarbakır</asp:ListItem>
+												<asp:ListItem>Edirne</asp:ListItem>
+												<asp:ListItem>Erzurum</asp:ListItem>
+												<asp:ListItem>Eskişehir</asp:ListItem>
+												<asp:ListItem>Gaziantep</asp:ListItem>
+												<asp:ListItem>Isparta</asp:ListItem>
+												<asp:ListItem>Mersin</asp:ListItem>
+												<asp:ListItem>İstanbul</asp:ListItem>
+												<asp:ListItem>İzmir</asp:ListItem>
+												<asp:ListItem>Manisa</asp:ListItem>
+												<asp:ListItem>Muğla</asp:ListItem>
+												<asp:ListItem>Rize</asp:ListItem>
+												<asp:ListItem>Sinop</asp:ListItem>
+                                            </asp:DropDownList>
+										</div>
+										<div class="field half">
+											<label for="place">Yerin Adı</label>
+											<asp:TextBox ID="TextBox5" runat="server" PlaceHolder="Yerin Adı"></asp:TextBox>
+										</div>
+
+										<div class="field">
+											<label for="message">Yorumunuz</label>
+											<asp:TextBox ID="TextBox3" runat="server" Rows="10" PlaceHolder="Yorumunuz"></asp:TextBox>
+										</div>
+										<ul class="actions">
+											<li><asp:Button ID="Kaydet" runat="server" Text="Kaydet" OnClick="Kaydet_Click" />
+											</li>
+											<div class="field half">
+											<label for="success"></label>
+											<asp:TextBox ID="TextBox4" runat="server" PlaceHolder="Success"></asp:TextBox>
+										</div>
+										</ul>
+
+										
+									</form>
+								</div>
+
+							<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+						</section>
+				</section>
+		</div>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+    </form>
+
+</body>
+</html>
